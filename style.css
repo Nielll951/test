@@ -173,3 +173,23 @@ body {
   .arrow {
       position: relative;
   }
+  .main {
+    display: block;
+    height: 2731px;
+  }
+  .slide {
+    display: block;
+    height: 410px;
+  }
+  .main-container {
+    display: block;
+    width: 1173px;
+    height: 2731px;
+    padding: 0 375px;
+  }
+  .filters {
+    display: block;
+    width: 271px;
+    height: 846px;
+    padding-left: 0;
+  }
