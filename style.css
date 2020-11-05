@@ -176,20 +176,34 @@ body {
   .main {
     display: block;
     height: 2731px;
+    
   }
   .slide {
     display: block;
-    height: 410px;
+    height: 400px;
   }
   .main-container {
     display: block;
-    width: 1173px;
-    height: 2731px;
-    padding: 0 375px;
+    height: 2321px;
+    background-color:  rgba(255, 255, 255, 0.10);
+    position: relative;
   }
   .filters {
     display: block;
     width: 271px;
     height: 846px;
-    padding-left: 0;
+    padding-right: 0;
+    background-color:  rgba(255, 255, 255, 0.20);
+    position: absolute;
+    left: 206px;
   }
+  .gadgets-container {
+    width: 900px;
+    height: 2321px;
+    padding-right: 375px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 477px;
+  }
+  
