@@ -175,9 +175,9 @@ body {
   .arrow {
       position: relative;
   }
-  .menu > li:hover >.arrow:after {
-    color: white;
-    background-image: url(images/arrow.png);
+  .menu > li:hover > .arrow:after {
+    background-color: white;
+    background-image: url(images/arrow2.png);
     width: 20px;
     height: 20px;
 
