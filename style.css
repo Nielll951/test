@@ -68,7 +68,7 @@ body {
     border: 1px solid #2c71b8;
     margin-top: 5px;
   }
-  button {
+  .col-md-2 {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -166,6 +166,7 @@ body {
     width: 20px;
     height: 20px;
     background-image: url(images/arrow.png);
+    background-repeat: no-repeat;
     position: absolute;
     top: -34px;
     right: 2px;
@@ -178,6 +179,7 @@ body {
   .menu > li:hover > .arrow:after {
     background-color: white;
     background-image: url(images/arrow2.png);
+    background-repeat: no-repeat;
     width: 20px;
     height: 20px;
 
@@ -206,7 +208,7 @@ body {
     position: absolute;
     left: 206px;
   }
-  .gadgets-container {
+  .gadgets {
     width: 900px;
     height: 2321px;
     padding-right: 375px;
@@ -215,4 +217,67 @@ body {
     top: 0;
     left: 477px;
   }
+  .slide3 {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    line-height: 400px;
+    letter-spacing: 3px;
+    font-weight: 100;
+  }
+  .filters > ul, p, button {
+    color: white;
+    list-style-type: square;
+    font-size: 22px;
+    line-height: 1.7;
+  }
+  .menu li {
+    list-style-type: none;
+  }
+  .filters > ul {
+    font-weight: lighter;
+    padding-left: 40px;
+  }
+  .filters > ul li:first-child {
+    list-style-type: none;
+    font-weight: normal;
+    padding-top: 20px;
+    margin-left: -23px;
+  }
+  .filters > button {
+    background-color: #2d71b8;
+    border: 1px solid white;
+    padding: 8px 60px;    
+    margin-left: 32px;
+    margin-top: 40px;
+  }
+  .filters > p {
+    padding-left: 32px;
+    padding-top: 35px;
+  }
+  .gadgets > p:first-child {
+    font-size: 15px;
+    font-weight: 100;
+    color: #a0b7d9;
+    padding-left: 30px;
+    padding-top: 30px;
+  }
+  .gadgets p + p {
+    font-size: 35px;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-top: 15px;
+  }
+  .gadgets div {
+    float: left;
+    width: 270px;
+    height: 652px;
+  }
+  .gadgets:after,
+  .gadgets div:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
   
