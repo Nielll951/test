@@ -313,30 +313,33 @@ body {
     top: 35%;
     left: 45%;
   }
-  .device1 .product_area {
+  [class^="dev"] .product_area {
     height: 180px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.75);
-    background-image: url(images/monitor.png);
+    background-image: url();
     background-repeat: no-repeat;
     background-position: center; 
     position: relative;
   }
+  .device1 .product_area {
+    background-image: url(images/monitor.png);
+  }
   .gadgets .col3  {
     margin-left: 90px;
   }
-  .device1 .device_name {
+  [class^="dev"] .d_name {
     font-size: 30px;
     font-weight: bold;
   }
-  .device1 .text {
+  [class^="dev"] .text {
     font-size: 22px;
     font-weight: lighter;
     text-align: left;
     line-height: 1.1;
     padding-left: 15px;
   }
-  .device1 .price {
+  [class^="dev"] .price {
     font-size: 41px;
     font-weight: bold;
     padding-left: 60px;
@@ -349,21 +352,23 @@ body {
     top: 25%;
     left: 16%;
   }
-  .device1 > button {
+  [class^="dev"] > button {
     background-color: #2d71b8;
     border: 1px solid white;
   }
-  .device1 .button-up {
+  [class^="dev"] .button-up {
     padding: 8px 20px;
     margin-left: 32px;
     margin-top: 10px;
   }
-  .device1 .button-down {
+  [class^="dev"] .button-down {
     padding: 8px 27px;
     margin-left: 32px;
     margin-top: 10px;
-    
   }
+   
+
+  
 
 
 
