@@ -35,6 +35,7 @@ body {
   .header {
     padding: 25px;
     background-color: rgba(255, 255, 255, 0.75);
+    border-bottom: 1px solid white;
   }
   .logo {
     padding-top: 7px;
@@ -198,6 +199,7 @@ body {
     height: 2321px;
     background-color:  rgba(255, 255, 255, 0.10);
     position: relative;
+    border-top: 1px solid white;
   }
   .filters {
     display: block;
@@ -207,11 +209,12 @@ body {
     background-color:  rgba(255, 255, 255, 0.20);
     position: absolute;
     left: 206px;
+    border-right: 1px solid white;
   }
   .gadgets {
     width: 900px;
     height: 2321px;
-    padding-right: 375px;
+    padding-right: 0;
     display: block;
     position: absolute;
     top: 0;
@@ -273,9 +276,11 @@ body {
   }
   .gadgets div {
     float: left;
-    width: 33%;
+    width: 270px;
     height: 652px;
     display: block;
+    border: 1px solid #feffff;
+    
   }
   .gadgets:after {
     content: "";
@@ -308,7 +313,58 @@ body {
     top: 35%;
     left: 45%;
   }
-  
+  .device1 .product_area {
+    height: 180px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-image: url(images/monitor.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+  }
+  .gadgets .col3  {
+    margin-left: 90px;
+  }
+  .device1 .device_name {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .device1 .text {
+    font-size: 22px;
+    font-weight: lighter;
+    text-align: left;
+    line-height: 1.1;
+    padding-left: 15px;
+  }
+  .device1 .price {
+    font-size: 41px;
+    font-weight: bold;
+    padding-left: 60px;
+    position: relative;
+  }
+  .device1 .coins {
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    top: 25%;
+    left: 16%;
+  }
+  .device1 > button {
+    background-color: #2d71b8;
+    border: 1px solid white;
+  }
+  .device1 .button-up {
+    padding: 8px 20px;
+    margin-left: 32px;
+    margin-top: 10px;
+  }
+  .device1 .button-down {
+    padding: 8px 27px;
+    margin-left: 32px;
+    margin-top: 10px;
+    
+  }
+
 
 
 
