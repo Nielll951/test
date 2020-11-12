@@ -317,13 +317,30 @@ body {
     height: 180px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.75);
-    background-image: url();
-    background-repeat: no-repeat;
-    background-position: center; 
-    position: relative;
   }
-  .device1 .product_area {
-    background-image: url(images/monitor.png);
+  .product_area .monitor_and_device {
+    padding-left: 30%;
+    padding-top: 18%;
+  }
+  .product_area .watch {
+    padding-left: 10%;
+    padding-top: 10%;
+  }
+  .product_area .laptop {
+    padding-left: 10%;
+    padding-top: 10%;
+  }
+  .product_area .phone {
+    padding-left: 10%;
+    padding-top: 10%;
+  }
+  .product_area .smartphone {
+    padding-left: 10%;
+    padding-top: 10%;
+  }
+  .product_area .mp3player {
+    padding-left: 10%;
+    padding-top: 10%;
   }
   .gadgets .col3  {
     margin-left: 90px;
@@ -366,6 +383,7 @@ body {
     margin-left: 32px;
     margin-top: 10px;
   }
+  
    
 
   
