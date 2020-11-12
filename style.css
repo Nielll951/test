@@ -255,6 +255,9 @@ body {
     padding-left: 32px;
     padding-top: 35px;
   }
+  .gadgets {
+    position: relative;
+  }
   .gadgets > p:first-child {
     font-size: 15px;
     font-weight: 100;
@@ -270,14 +273,60 @@ body {
   }
   .gadgets div {
     float: left;
-    width: 270px;
+    width: 33%;
     height: 652px;
+    display: block;
   }
-  .gadgets:after,
-  .gadgets div:after {
+  .gadgets:after {
     content: "";
     display: block;
     clear: both;
   }
+  .option {
+    background-color: #2d71b8;
+    color: #bfcee3;
+    border: 1px solid #feffff;
+    width: 270px;
+    height: 40px;
+    position: absolute;
+    font-weight: 100;
+    top: 79px;
+    left: 60%;
+    font-size: 22px;
+  }
+  footer {
+    background-color: rgba(255, 255, 255, 0.75);
+    display: block;
+    height: 100px;
+    position: relative;
+  }
+  footer > p {
+    color: #3070b8;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    top: 35%;
+    left: 45%;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
