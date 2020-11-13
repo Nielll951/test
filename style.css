@@ -183,42 +183,37 @@ body {
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
-
   }
   .main {
     display: block;
-    height: 2731px;
-    
+    height: 2731px; 
   }
-  .slide {
-    display: block;
-    height: 400px;
-  }
-  .main-container {
-    display: block;
-    height: 2321px;
-    background-color:  rgba(255, 255, 255, 0.10);
-    position: relative;
-    border-top: 1px solid white;
-  }
+  .col-md-9 {
+    width: 75%;
+    }
+    .col-md-12 {
+      display: block;
+      height: 400px;
+      width: 1170px;
+      margin-left: 12%;
+    }
+    .col-md-12 .row_slide {
+      height: 300px;
+    }
+    .row_markers {
+      height: 100px;
+    }
+    .row-products {
+      height: 2020px;
+    }
+    .row_load_more {
+      height: 150px;
+    }
   .filters {
     display: block;
-    width: 271px;
-    height: 846px;
-    padding-right: 0;
-    background-color:  rgba(255, 255, 255, 0.20);
-    position: absolute;
-    left: 206px;
+    padding-right: 
+    background-color: rgba(255, 255, 255, 0.20);
     border-right: 1px solid white;
-  }
-  .gadgets {
-    width: 900px;
-    height: 2321px;
-    padding-right: 0;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 477px;
   }
   .slide3 {
     color: white;
@@ -258,23 +253,23 @@ body {
     padding-left: 32px;
     padding-top: 35px;
   }
-  .gadgets {
+  .col-md-9 {
     position: relative;
   }
-  .gadgets > p:first-child {
+  .col-md-9 > p:first-child {
     font-size: 15px;
     font-weight: 100;
     color: #a0b7d9;
     padding-left: 30px;
     padding-top: 30px;
   }
-  .gadgets p + p {
+  .col-md-9 p + p {
     font-size: 35px;
     font-weight: 600;
     padding-left: 30px;
     padding-top: 15px;
   }
-  .gadgets div {
+  .col-md-9 div {
     float: left;
     width: 270px;
     height: 652px;
@@ -282,7 +277,7 @@ body {
     border: 1px solid #feffff;
     
   }
-  .gadgets:after {
+  .col-md-9:after {
     content: "";
     display: block;
     clear: both;
@@ -329,13 +324,13 @@ body {
     padding-left: 38%;
     padding-top: 15%;
   }
-  .gadgets .col1  {
+  .col-md-9 .col1  {
     margin-left: 30px;
   }
-  .gadgets .col2  {
+  .col-md-9 .col2  {
     margin-left: 0px;
   }
-  .gadgets .col3  {
+  .col-md-9 .col3  {
     margin-left: 0px;
   }
   [class^="dev"] .d_name {
@@ -422,16 +417,6 @@ body {
     position: absolute;
     top: 35%;
     left: 45%;
+  }
    
-
-  
-
-
-
-
-
-
-
-
-
 
