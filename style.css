@@ -299,24 +299,11 @@ body {
     left: 60%;
     font-size: 22px;
   }
-  footer {
-    background-color: rgba(255, 255, 255, 0.75);
-    display: block;
-    height: 100px;
-    position: relative;
-  }
-  footer > p {
-    color: #3070b8;
-    font-size: 18px;
-    font-weight: 300;
-    position: absolute;
-    top: 35%;
-    left: 45%;
-  }
   [class^="dev"] .product_area {
     height: 180px;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.75);
+    position: relative;
   }
   .product_area .monitor_and_device {
     padding-left: 30%;
@@ -342,12 +329,19 @@ body {
     padding-left: 38%;
     padding-top: 15%;
   }
+  .gadgets .col1  {
+    margin-left: 30px;
+  }
+  .gadgets .col2  {
+    margin-left: 0px;
+  }
   .gadgets .col3  {
-    margin-left: 90px;
+    margin-left: 0px;
   }
   [class^="dev"] .d_name {
     font-size: 30px;
     font-weight: bold;
+    padding-left: 12px;
   }
   [class^="dev"] .text {
     font-size: 22px;
@@ -359,15 +353,25 @@ body {
   [class^="dev"] .price {
     font-size: 41px;
     font-weight: bold;
-    padding-left: 60px;
+    padding-left: 70px;
     position: relative;
   }
-  .device1 .coins {
+  [class^="dev"] {
+    position: relative;
+  }
+  [class^="dev"] .coins {
     font-weight: bold;
     font-size: 25px;
     position: absolute;
-    top: 25%;
-    left: 16%;
+    top: 69%;
+    left: 58%;
+  }
+  [class^="dev"] .coins_of_1250 {
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    top: 69%;
+    left: 68%;
   }
   [class^="dev"] > button {
     background-color: #2d71b8;
@@ -378,12 +382,46 @@ body {
     margin-left: 32px;
     margin-top: 10px;
   }
+  [class^="dev"] .button-down:hover {
+    background-color: #568dc6; 
+  }
+  [class^="dev"] .button-up:hover {
+    background-color: #568dc6; 
+  }
   [class^="dev"] .button-down {
     padding: 8px 27px;
     margin-left: 32px;
     margin-top: 10px;
   }
-  
+  [class^="product_area"] .zoom {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  [class^="product_area"] .heart {
+    position: absolute;
+    right: 11px;
+    top: 40px;
+  }
+  .lode_more {
+    text-align: center;
+    font-size: 30px;
+    font-weight: lighter;
+  }
+
+  footer {
+    background-color: rgba(255, 255, 255, 0.75);
+    display: block;
+    height: 100px;
+    position: relative;
+  }
+  footer > p {
+    color: #3070b8;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    top: 35%;
+    left: 45%;
    
 
   
@@ -397,15 +435,3 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-  
