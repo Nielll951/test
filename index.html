@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">    <title>Shop project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">   
+    <title>Shop project</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header class="header" >
-        <div class="contaner">
+        <div class="container">
             <div class="row">
                 <div class="col-md-3"> 
                     <div class="logo">
@@ -46,17 +47,12 @@
                             <div class="search">
                                 <form action="" class="row">
                                     <input type="text" class="col-md-10" placeholder="search">
-                                    <button class="col-md-2">
-                                        <a href="">
-                                            <img  src="" alt="">
-                                        </a>
-                                    </button>
+                                    <button class="col-md-2 button_search"></button> 
                                 </form>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="cart">
-
                                 <div class="product-count">4</div>
                             </div>
                         </div>
@@ -65,11 +61,20 @@
             </div>
         </div>
     </header>
-    <main class="main">
-      <div class="col-md-12">
-        <div class="row_slide">Slide</div>
-        <div class="row_markers"></div>
-        <div class="col-md-3">
+    <main class="container">
+      <div class="row">
+           <section class="slides">
+              <div class="slide">Slide #3</div>
+                   <div>
+                        <p class="squares"></p>
+                        <p class="squares"></p>
+                        <p class="squares"></p>
+                        <p class="squares"></p>
+                   </div>  
+           </section> 
+      </div>
+      <div class="row"></div>
+        <aside class="col-md-3">
             <div class="filters">             
                 <ul>
                     <li>DEVICE TYPE</li>
@@ -97,166 +102,348 @@
                 <p>Show more options...</p> 
                 <button>SUBMIT</button>
             </div>
-        </div>
-        <div class="col-md-9">
-            <div class="row_title">
-                <p>Home page > Products > Laptops and Tablets</p>
-                <h1>Laptops and Tablets</h1>
+        </aside>
+        <section class="col_md_9">
+                <p class="text1">Home page > Products > Laptops and Tablets</p>
+                <p class="text2">Laptops and Tablets</p>
+            <div class="row">
+                <div class="col_md_4">
+                    <div class="product_list">
+                        <div class="product_list_image">
+                            <img src="images/mp3player.png" alt="mp3player">
+                            <div class="heart"></div>
+                            <div class="cube"></div>                             
+                        </div>
+                        <div class="product_descripition">
+                            <p class="name">#1 Device Name</p>
+                            <p class="content">
+                                <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">TYPE:</span>
+                                <span class="text">Laptop</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">SCREEN SIZE:</span>
+                                <span class="text">7 inches</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">RAM:</span>
+                                <span class="text">1GB</span>
+                            </p>                           
+                        </div>
+                        <div class="product-description-price">
+                            $599
+                            <div id="index-1">25</div>
+                        </div>
+                        <div class="product-details-cart">
+                            <form action="app.php" method="post">
+                                <input type="submit" class="details-cart" value="more details">
+                                <input type="submit" class="details-cart cart-white" value="add to cart">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-list-image">
+                            <a href="">
+                                <img src="images/mp3player.png" alt="mp3player">
+                                <div class="heart"></div>
+                                <div class="cube"></div>
+                            </a>
+                        </div>
+                        <div class="product-description">
+                            <p class="name">#2 Device Name</p>
+                            <p class="content">
+                                <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">TYPE:</span>
+                                <span class="text">Laptop</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">SCREEN SIZE:</span>
+                                <span class="text">7 inches</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">RAM:</span>
+                                <span class="text">1GB</span>
+                            </p>
+                        </div>
+                        <div class="product-description-price">
+                            $1250
+                            <div id="index-2">99</div>
+                        </div>
+                        <div class="product-details-cart">
+                            <form action="app.php" method="post">
+                                <input type="submit" class="details-cart" value="more details">
+                                <input type="submit" class="details-cart cart-white" value="add to cart">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-list-image">
+                            <img src="images/watch.png" alt="watch">
+                            <div class="heart"></div>
+                            <div class="cube"></div>
+                        </div>
+                        <div class="product-description">
+                            <p class="name">#3 Device Name</p>
+                            <p class="content">
+                                <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">TYPE:</span>
+                                <span class="text">Laptop</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">SCREEN SIZE:</span>
+                                <span class="text">7 inches</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">RAM:</span>
+                                <span class="text">1GB</span>
+                            </p>
+                        </div>
+                        <div class="product-description-price">
+                            $399
+                            <div id="index-3">50</div>
+                        </div>
+                        <div class="product-details-cart">
+                            <form action="app.php" method="post">
+                                <input type="submit" class="details-cart" value="more details">
+                                <input type="submit" class="details-cart cart-white" value="add to cart">
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row-products">
-              <div class="device col1">
-                  <div class="product_area">
-                      <img class="monitor_and_device" src="images/monitor.png" alt="">
-                      <img class="zoom" src="images/zoom.png" alt="">
-                      <img class="heart" src="images/heart.png" alt="">
-                  </div>
-                  <p class="d_name">#1 Device Name<p>                   
-                  <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                  <p class="text"><strong>TYPE:</strong> Laptop</p>
-                  <p class="text">SCREEN SIZE: 7 inches</p>
-                  <p class="text">RAM: 1GB</p>
-                  <p class="text price">$599</p>
-                  <p class="text coins">25</p>               
-                  <button class="button-up">MORE DETAILS</button>
-                  <button class="button-down">ADD TO CART</button>
-              </div>
-              <div class="device col2">
-                <div class="product_area">
-                    <img  class="monitor_and_device" src="images/device.png" alt="">
-                    <img class="zoom" src="images/zoom.png" alt="">
-                    <img class="heart" src="images/heart.png" alt="">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product-list">
+                        <div class="product-list-image">
+                            <img src="images/laptop.png" alt="laptop">
+                            <div class="heart"></div>
+                            <div class="cube"></div>
+                        </div>
+                        <div class="product-description">
+                            <p class="name">#1 Device Name</p>
+                            <p class="content">
+                                <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">TYPE:</span>
+                                <span class="text">Laptop</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">SCREEN SIZE:</span>
+                                <span class="text">7 inches</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">RAM:</span>
+                                <span class="text">1GB</span>
+                            </p>
+                        </div>
+                        <div class="product-description-price">
+                            $599
+                            <div id="index-1">25</div>
+                        </div>
+                        <div class="product-details-cart">
+                            <form action="app.php" method="post">
+                                <input type="submit" class="details-cart" value="more details">
+                                <input type="submit" class="details-cart cart-white" value="add to cart">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-list-image">
+                            <img src="images/smartphone.png" alt="mp3player">
+                            <div class="heart"></div>
+                            <div class="cube"></div>
+                        </div>
+                        <div class="product-description">
+                            <p class="name">#2 Device Name</p>
+                            <p class="content">
+                                <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">TYPE:</span>
+                                <span class="text">Laptop</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">SCREEN SIZE:</span>
+                                <span class="text">7 inches</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">RAM:</span>
+                                <span class="text">1GB</span>
+                            </p>
+                        </div>
+                        <div class="product-description-price">
+                            $1250
+                            <div id="index-2">99</div>
+                        </div>
+                        <div class="product-details-cart">
+                            <form action="app.php" method="post">
+                                <input type="submit" class="details-cart" value="more details">
+                                <input type="submit" class="details-cart cart-white" value="add to cart">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-list-image">
+                            <img src="images/phone.png" alt="phone">
+                            <div class="heart"></div>
+                            <div class="cube"></div>
+                        </div>
+                        <div class="product-description">
+                            <p class="name">#3 Device Name</p>
+                            <p class="content">
+                                <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">TYPE:</span>
+                                <span class="text">Laptop</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">SCREEN SIZE:</span>
+                                <span class="text">7 inches</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">RAM:</span>
+                                <span class="text">1GB</span>
+                            </p>
+                        </div>
+                        <div class="product-description-price">
+                            $399
+                            <div id="index-3">50</div>
+                        </div>
+                        <div class="product-details-cart">
+                            <form action="app.php" method="post">
+                                <input type="submit" class="details-cart" value="more details">
+                                <input type="submit" class="details-cart cart-white" value="add to cart">
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <p class="d_name">#1 Device Name<p>                   
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p class="text"><strong>TYPE:</strong> Laptop</p>
-                <p class="text">SCREEN SIZE: 7 inches</p>
-                <p class="text">RAM: 1GB</p>
-                <p class="text price">$1250</p>
-                <p class="text coins_of_1250">99</p>               
-                <button class="button-up">MORE DETAILS</button>
-                <button class="button-down">ADD TO CART</button>
-              </div>
-              <div class="device col3">
-                <div class="product_area">
-                    <img class="watch" src="images/watch.png" alt="">
-                    <img class="zoom" src="images/zoom.png" alt="">
-                    <img class="heart" src="images/heart.png" alt="">
-                </div>
-                <p class="d_name">#1 Device Name<p>                   
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p class="text"><strong>TYPE:</strong> Laptop</p>
-                <p class="text">SCREEN SIZE: 7 inches</p>
-                <p class="text">RAM: 1GB</p>
-                <p class="text price">$399</p>
-                <p class="text coins">50</p>               
-                <button class="button-up">MORE DETAILS</button>
-                <button class="button-down">ADD TO CART</button>
-              </div>
-              <div class="device col1">
-                <div class="product_area">
-                    <img class="laptop" src="images/laptop.png" alt="">
-                    <img class="zoom" src="images/zoom.png" alt="">
-                    <img class="heart" src="images/heart.png" alt="">
-                </div>
-                <p class="d_name">#1 Device Name<p>                   
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p class="text"><strong>TYPE:</strong> Laptop</p>
-                <p class="text">SCREEN SIZE: 7 inches</p>
-                <p class="text">RAM: 1GB</p>
-                <p class="text price">$599</p>
-                <p class="text coins">25</p>               
-                <button class="button-up">MORE DETAILS</button>
-                <button class="button-down">ADD TO CART</button>
-              </div>
-              <div class="device col2">
-                <div class="product_area">
-                    <img class="mp3player" src="images/m3player.png" alt="">
-                    <img class="zoom" src="images/zoom.png" alt="">
-                    <img class="heart" src="images/heart.png" alt="">
-                </div>
-                <p class="d_name">#1 Device Name<p>                   
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p class="text"><strong>TYPE:</strong> Laptop</p>
-                <p class="text">SCREEN SIZE: 7 inches</p>
-                <p class="text">RAM: 1GB</p>
-                <p class="text price">$1250</p>
-                <p class="text coins_of_1250">99</p>               
-                <button class="button-up">MORE DETAILS</button>
-                <button class="button-down">ADD TO CART</button>
-              </div>
-              <div class="device col3">
-                <div class="product_area">
-                    <img class="phone" src="images/phone.png" alt="">
-                    <img class="zoom" src="images/zoom.png" alt="">
-                    <img class="heart" src="images/heart.png" alt="">
-                </div>
-                <p class="d_name">#1 Device Name<p>                   
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p class="text"><strong>TYPE:</strong> Laptop</p>
-                <p class="text">SCREEN SIZE: 7 inches</p>
-                <p class="text">RAM: 1GB</p>
-                <p class="text price">$399</p>
-                <p class="text coins">50</p>               
-                <button class="button-up">MORE DETAILS</button>
-                <button class="button-down">ADD TO CART</button>
-              </div>
-              <div class="device col1">
-                <div class="product_area">
-                    <img class="smartphone" src="images/smartphone.png" alt="">
-                    <img class="zoom" src="images/zoom.png" alt="">
-                    <img class="heart" src="images/heart.png" alt="">
-                </div>
-                <p class="d_name">#1 Device Name<p>                   
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p class="text"><strong>TYPE:</strong> Laptop</p>
-                <p class="text">SCREEN SIZE: 7 inches</p>
-                <p class="text">RAM: 1GB</p>
-                <p class="text price">$599</p>
-                <p class="text coins">25</p>               
-                <button class="button-up">MORE DETAILS</button>
-                <button class="button-down">ADD TO CART</button>
-              </div>
-              <div class="device col2">
-                <div class="product_area">
-                    <img  class="monitor_and_device" src="images/device.png" alt="">
-                    <img class="zoom" src="images/zoom.png" alt="">
-                    <img class="heart" src="images/heart.png" alt="">
-                </div>
-                <p class="d_name">#1 Device Name<p>                   
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p class="text"><strong>TYPE:</strong> Laptop</p>
-                <p class="text">SCREEN SIZE: 7 inches</p>
-                <p class="text">RAM: 1GB</p>
-                <p class="text price">$1250</p>
-                <p class="text coins_of_1250">99</p>               
-                <button class="button-up">MORE DETAILS</button>
-                <button class="button-down">ADD TO CART</button>
-              </div>
-              <div class="device col3">
-                <div class="product_area">
-                    <img  class="watch" src="images/watch.png" alt="">
-                    <img class="zoom" src="images/zoom.png" alt="">
-                    <img class="heart" src="images/heart.png" alt="">
-                </div>
-                <p class="d_name">#1 Device Name<p>                   
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p class="text"><strong>TYPE:</strong> Laptop</p>
-                <p class="text">SCREEN SIZE: 7 inches</p>
-                <p class="text">RAM: 1GB</p>
-                <p class="text price">$399</p>
-                <p class="text coins">50</p>               
-                <button class="button-up">MORE DETAILS</button>
-                <button class="button-down">ADD TO CART</button>
-              </div>
             </div>
-            <div class="row_load_more">
-                <p>Load more...</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product-list">
+                        <div class="product-list-image">
+                            <img src="images/sm.png" alt="tablet">
+                            <div class="heart"></div>
+                            <div class="cube"></div>
+                        </div>
+                        <div class="product-description">
+                            <p class="name">#1 Device Name</p>
+                            <p class="content">
+                                <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">TYPE:</span>
+                                <span class="text">Laptop</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">SCREEN SIZE:</span>
+                                <span class="text">7 inches</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">RAM:</span>
+                                <span class="text">1GB</span>
+                            </p>
+                        </div>
+                        <div class="product-description-price">
+                            $599
+                            <div id="index-1">25</div>
+                        </div>
+                        <div class="product-details-cart">
+                            <form action="app.php" method="post">
+                                <input type="submit" class="details-cart" value="more details">
+                                <input type="submit" class="details-cart cart-white" value="add to cart">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-list-image">
+                            <img src="images/device.png" alt="stereo-2">
+                            <div class="heart"></div>
+                            <div class="cube"></div>
+                        </div>
+                        <div class="product-description">
+                            <p class="name">#2 Device Name</p>
+                            <p class="content">
+                                <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">TYPE:</span>
+                                <span class="text">Laptop</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">SCREEN SIZE:</span>
+                                <span class="text">7 inches</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">RAM:</span>
+                                <span class="text">1GB</span>
+                            </p>
+                        </div>
+                        <div class="product-description-price">
+                            $1250
+                            <div id="index-2">99</div>
+                        </div>
+                        <div class="product-details-cart">
+                            <form action="app.php" method="post">
+                                <input type="submit" class="details-cart" value="more details">
+                                <input type="submit" class="details-cart cart-white" value="add to cart">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-list-image">
+                            <img src="images/watch.png" alt="watch-2">
+                            <div class="heart"></div>
+                            <div class="cube"></div>
+                        </div>
+                        <div class="product-description">
+                            <p class="name">#3 Device Name</p>
+                            <p class="content">
+                                <span class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">TYPE:</span>
+                                <span class="text">Laptop</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">SCREEN SIZE:</span>
+                                <span class="text">7 inches</span>
+                            </p>
+                            <p class="content">
+                                <span class="bold-text">RAM:</span>
+                                <span class="text">1GB</span>
+                            </p>
+                        </div>
+                        <div class="product-description-price">
+                            $399
+                            <div id="index-3">50</div>
+                        </div>
+                        <div class="product-details-cart">
+                            <form action="app.php" method="post">
+                                <input type="submit" class="details-cart" value="more details">
+                                <input type="submit" class="details-cart cart-white" value="add to cart">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="product-list-image">
+
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-    </main>
-    <footer class="footer">
-        <p>&copy Copyright 2017</p>
-    </footer>
+        </section>
+    </div>
+</main>
+<footer class="footer">Footer</footer>
 </body>
-</html>
+</html>         
+              
