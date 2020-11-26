@@ -216,6 +216,17 @@ body {
   margin-top: 15px;
   margin-left: 5px;
 }
+.sort_by {
+  background-color:  rgb(44, 113, 184);
+  color: white;
+  border: 1px solid white;
+  font-size: 21px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  width: 270px;
+  height: 40px;
+  margin-left: 590px;
+}
 .product-list {
   width: 270px;
   height: 650px;
@@ -239,6 +250,10 @@ body {
   background-position: center center;
   position: absolute;
   transform: translate(775%, -690%); 
+}
+.heart:hover {
+  background-image: url(images/white_heart.png);
+  background-color: rgb(44, 113, 184);
 }
 .cube {
   height: 30px;
@@ -277,7 +292,7 @@ p {
 .content {
   margin-bottom: 15px;
 }
-.text {
+ .text {
   font-size: 21px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
