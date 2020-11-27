@@ -79,33 +79,71 @@
         </div>
         <div class="row">
             <aside class="col-md-3">
-                <div class="filters">
-                    <ul>
-                        <li class="bold_text">DEVICE TYPE</li>
-                        <li class="text">Laptop</li>
-                        <li class="text">Tablet</li>
-                    </ul><br>
-
-                    <ul>
-                        <li class="bold_text">COLOR</li>
-                        <li class="text">Black</li>
-                        <li class="text">Red</li>
-                        <li class="text">Green</li>
-                        <li class="text">Blue</li>
-                        <li class="text">Orange</li>
-                    </ul><br>
-
-                    <ul>
-                        <li class="bold_text">RAM</li>
-                        <li class="text">1GB</li>
-                        <li class="text">2GB</li>
-                        <li class="text">4GB</li>
-                        <li class="text">6GB</li>
-                        <li class="text">8GB</li>
-                    </ul>
-                    <p class="text show_more_op">Show more options ...</p>
-                    <input type="submit" class="details-cart submit" value="submit">
-                </div>
+              <div class="row aside">
+                <fieldset class="device_type_box">
+                  <legend>DEVICE TYPE</legend>
+                  <div class="aside_boxes">
+                      <input type="checkbox" id="laptop" name="laptop" value="device-type">
+                      <label for="laptop" class="checkbox_label">Laptop</label>
+                  </div>
+                  <div class="aside_boxes">
+                      <input type="checkbox" id="tablet" name="tablet" value="device-type">
+                      <label for="tablet" class="checkbox_label">Tablet</label>
+                  </div>                    
+                </fieldset>
+              </div>
+              <div class="row aside">
+                <fieldset class="color-box">
+                    <legend>COLOR</legend>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="black" name="black" value="color">
+                        <label for="black" class="checkbox_label">Black</label>
+                    </div>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="red" name="red" value="color">
+                        <label for="red" class="checkbox_label">Red</label>
+                    </div>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="green" name="green" value="color">
+                        <label for="green" class="checkbox_label">Green</label>
+                    </div>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="blue" name="blue" value="color">
+                        <label for="blue" class="checkbox_label">Blue</label>
+                    </div>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="orange" name="orange" value="color">
+                        <label for="orange" class="checkbox_label">Orange</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="row aside">
+                <fieldset class="ram-box">
+                    <legend>RAM</legend>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="one_gb" name="one_gb" value="ram">
+                        <label for="one_gb" class="checkbox_label" name="one_gb" value="ram">1GB</label>
+                    </div>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="two_gb" name="one_gb" value="ram">
+                        <label for="two_gb" class="checkbox_label">2GB</label>
+                    </div>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="three_gb" name="one_gb" value="ram">
+                        <label for="three_gb" class="checkbox_label">4GB</label>
+                    </div>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="four_gb" name="one_gb" value="ram">
+                        <label for="four_gb" class="checkbox_label">6GB</label>
+                    </div>
+                    <div class="aside_boxes">
+                        <input type="checkbox" id="five_gb" name="one_gb" value="ram">
+                        <label for="five_gb" class="checkbox_label">8GB</label>
+                    </div>
+                </fieldset>
+            </div>
+                <p class="text show_more_op">Show more options ...</p>
+                <input type="submit" class="details-cart submit" value="submit">
             </aside>
             <section class="col_md_9">
                 <p class="text1">Home page > Products > Laptops and Tablets</p>

@@ -23,6 +23,7 @@ body {
   }
   .col-md-3 {
     width: 25%;
+    height: 85%;
   }
   .col-md-6 {
     width: 50%;
@@ -362,10 +363,6 @@ footer {
   padding: 25px 0;
   background-color: rgba(255, 255, 255, 0.75);
 }
-.filters {
-  color: white;
-  margin-top: 20px;
-}
 .slide {
   text-align: center;
   color: white;
@@ -385,4 +382,47 @@ footer {
 }
 .squares:hover {
   background-color: white;
+}
+input[type="checkbox"]:checked + label:before {
+  background-color: #fff;
+}
+input[type="checkbox"] + label:before {
+    content: "\2714";
+    width: 8px;
+    height: 8px;
+    border: #fff solid 1px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    color: transparent;
+    padding: 2px;
+}
+.aside_boxes {
+  padding-top: 20px;
+}
+.color-box {
+  margin-top: 60px;
+}
+.ram-box {
+  margin-top: 60px;
+}
+legend {
+  font-size: 21px;
+  font-weight: 600;
+  color: white;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.checkbox_label {
+  font-size: 21px;
+  color: white;
+  font-weight: 200;
+}
+.device_type_box {
+  margin-top: 30px;
+}
+.aside {
+  width: 250px;
+  margin-left: 30px;
 }
