@@ -28,9 +28,10 @@ body {
   .col-md-6 {
     width: 50%;
   }
-  .col_md_9 {
+  .col-md-9 {
     width: 75%;
     float: left;
+
   } 
   [class*="col-"] {
     float: left;
@@ -353,7 +354,8 @@ p {
 .white_cart {
   background-image: url(images/white_cart.png);
   background-repeat: no-repeat;
-  background-position: 93%;
+  background-position: 91%;
+  padding-right: 12px;
 }
 .submit {
   margin: 30px;
