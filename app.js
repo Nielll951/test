@@ -73,5 +73,8 @@ function showModalByScroll() {
     })
  })
 
+ //change product count
+ 
+
 
 
