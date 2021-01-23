@@ -74,7 +74,48 @@ function showModalByScroll() {
  })
 
  //change product count
+ //нашли все эл.
+ let decrementButns = document.querySelectorAll(".decrement-button");
+ let incrementButns = document.querySelectorAll(".increment-button");
+ let quantityValue = document.querySelectorAll(".product-quantity input");
+let currentCount = +quantityValue.value;
+let minCount = 1;
+let maxCount = 5;
+
+for(let i = 0;i < quantityValue.length;i++) {
+    let currentCount = +quantityValue[i].value;
+    toggleButtonState(currentCount,decrementButns[i],incrementButns[i])
+}
+
+function toggleButtonState(count,decrementButns,incrementButns) {
+    decrementButns.disabled = count <= minCount;
+    incrementButns.disabled = count >= maxCount;
+}
+
+toggleButtonState(currentCount)
+
+
+incrementButns.addEventListener("click",function() {
+    let currentCount = +quantityValue.value;
+    let nextCount = currentCount + 1;
+    quantityValue.value = nextCount;
+
+    toggleButtonState(nextCount)
+
+})
+
+decrementButns.addEventListener("click",function() {
+    let currentCount = +quantityValue.value;
+    let nextCount = currentCount - 1;
+    quantityValue.value = nextCount;
+
+    toggleButtonState(nextCount)
+
+})
+
+
  
+
 
 
 
