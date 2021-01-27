@@ -48,14 +48,14 @@ function showModalByScroll() {
     }
 
 
-function showModalByScroll() {
-    if(window.pageYOffset > document.body.scrollHeight/2) {
-        openModal();
-        window.removeEventListener("scroll",showModalByScroll)// на событии scroll удалить ф. showModalByScroll.
-    }
-}
+// function showModalByScroll() {
+//     if(window.pageYOffset > document.body.scrollHeight/2) {
+//         openModal();
+//         window.removeEventListener("scroll",showModalByScroll)// на событии scroll удалить ф. showModalByScroll.
+//     }
+// }
 
- window.addEventListener("scroll",showModalByScroll);
+//  window.addEventListener("scroll",showModalByScroll);
    
 // change like button state
 
@@ -78,44 +78,96 @@ function showModalByScroll() {
  let decrementButns = document.querySelectorAll(".decrement-button");
  let incrementButns = document.querySelectorAll(".increment-button");
  let quantityValue = document.querySelectorAll(".product-quantity input");
-let currentCount = +quantityValue.value;
-let minCount = 1;
-let maxCount = 5;
 
-for(let i = 0;i < quantityValue.length;i++) {
-    let currentCount = +quantityValue[i].value;
-    toggleButtonState(currentCount,decrementButns[i],incrementButns[i])
-}
-
-function toggleButtonState(count,decrementButns,incrementButns) {
-    decrementButns.disabled = count <= minCount;
-    incrementButns.disabled = count >= maxCount;
-}
-
-toggleButtonState(currentCount)
+// let minCount = 1;
+// let maxCount = 5;
 
 
-incrementButns.addEventListener("click",function() {
-    let currentCount = +quantityValue.value;
-    let nextCount = currentCount + 1;
-    quantityValue.value = nextCount;
 
-    toggleButtonState(nextCount)
+// for(let i = 0;i < quantityValue.length;i++) {
+//     let currentCount = +quantityValue[i].value;
+//     toggleButtonState(currentCount,decrementButns[i],incrementButns[i])
+// }
 
-})
+// function toggleButtonState(count,decrementButn,incrementButn) {
+//     decrementButn.disabled = count <= minCount;
+//     incrementButn.disabled = count >= maxCount;
+// }
 
-decrementButns.addEventListener("click",function() {
-    let currentCount = +quantityValue.value;
-    let nextCount = currentCount - 1;
-    quantityValue.value = nextCount;
+// for(let i = 0;i < incrementButns.length; i++) {
+//     incrementButns[i].addEventListener("click",function() {
+//         let currentCount = +quantityValue[i].value;
+//         let nextCount = currentCount + 1;
+//         quantityValue[i].value = nextCount;
+    
+//         toggleButtonState(nextCount,decrementButns[i],incrementButns[i])
+    
+//     })
+// }
 
-    toggleButtonState(nextCount)
+// for(let i = 0;i < decrementButns.length; i++) {
+//     decrementButns[i].addEventListener("click",function() {
+//         let currentCount = +quantityValue[i].value;
+//         let nextCount = currentCount - 1;
+//         quantityValue[i].value = nextCount;
 
-})
+//         toggleButtonState(nextCount,decrementButns[i],incrementButns[i])
 
+//     })
 
+// } 
  
 
+//function constructor change product quantity
+
+function Counter(incrementButn,decrementButn,inputField,minCount = 1,maxCount = 5) {
+    // this.incrementButn = incrementButns; // this code is the same with below one.
+    // this.decrementButn = decrementButns;
+    // this.inputField = inputField;
+
+    this.domRefs = {// domRefs - object. This code is the same with above one(shorthand)
+        incrementButn,
+        decrementButn,
+        inputField,
+    }
+
+    this.toggleButtonState = function () {
+        let count = this.domRefs.inputField.value;
+        this.domRefs.decrementButn.disabled = count <= minCount;
+        this.domRefs.incrementButn.disabled = count >= maxCount;
+    }
+
+    this.toggleButtonState();
+
+    this.increment = function() {
+        let currentCount = +this.domRefs.inputField.value;
+        let nextCount = currentCount + 1;
+        this.domRefs.inputField.value = nextCount;
+        
+        this.toggleButtonState()
+    }
+
+    this.decrement = function() {
+        let currentCount = +this.domRefs.inputField.value;
+        let nextCount = currentCount - 1;
+        this.domRefs.inputField.value = nextCount;
+        
+        this.toggleButtonState()
+    }
+
+    this.domRefs.incrementButn.addEventListener("click",this.increment.bind(this));
+    this.domRefs.decrementButn.addEventListener("click",this.decrement.bind(this));
+
+    console.log(this)
+}
+
+const counter = new Counter(incrementButns[0],decrementButns[0],quantityValue[0]);
+
+
+// slider slick
+$(".slider-block").slick({
+    dots:true,
+});
 
 
 
