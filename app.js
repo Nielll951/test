@@ -6,7 +6,8 @@ let addToCartButtons = document.querySelectorAll(".add-to-cart");// at first we 
 //можно задать addEventListener для одного эл., но не для неск.эл.(псевдомассива).
 for(let i = 0;i < addToCartButtons.length;i++) { // перебираем все кнопки add-to-cart циклом for
     addToCartButtons[i].addEventListener("click",function() {
-        productsCountEl.textContent = +productsCountEl.textContent + 1; 
+        productsCountEl.textContent = +productsCountEl.textContent + +quantityValue[i].value;
+        quantityValue[i].value = 1;
    })
 }
 
@@ -161,12 +162,18 @@ function Counter(incrementButn,decrementButn,inputField,minCount = 1,maxCount = 
     console.log(this)
 }
 
-const counter = new Counter(incrementButns[0],decrementButns[0],quantityValue[0]);
+const = counters = [];
+
+quantityValue.forEach((counterItem,i) => (
+    counter[i] = new Counter(incrementButns[0],decrementButns[0],quantityValue[0]);
+)
+
+const 
 
 
 // slider slick
 $(".slider-block").slick({
-    dots:true,
+    dots:true, 
 });
 
 
