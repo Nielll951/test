@@ -103,7 +103,7 @@ body {
     font-size: 50px;
   }
   
-  .slick-dots li button:before {
+  .slick-dots li button:before { 
     font-size: 20px;
   }
   

@@ -162,19 +162,23 @@ function Counter(incrementButn,decrementButn,inputField,minCount = 1,maxCount = 
     console.log(this)
 }
 
-const = counters = [];
-
+const counters = [];
+//передеаем колбэк ф., где 1й пар-текущий эл.массива, 2й пар.-порядковый номер(индекс элемента), 3й пар-сам массив, но 
+// 2й и 3й пар.не обязательные.
 quantityValue.forEach((counterItem,i) => (
-    counter[i] = new Counter(incrementButns[0],decrementButns[0],quantityValue[0]);
-)
+    counters[i] = new Counter(incrementButns[i],decrementButns[i],counterItem)   
 
-const 
+))
+  
+
+
+ 
 
 
 // slider slick
 $(".slider-block").slick({
     dots:true, 
-});
+}); 
 
 
 
