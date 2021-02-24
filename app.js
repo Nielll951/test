@@ -10,12 +10,7 @@ for(let i = 0;i < addToCartButtons.length;i++) {
         productsCountEl.textContent = +productsCountEl.textContent + 1;
     })
 }
-// for(let i = 0;i < addToCartButtons.length;i++) { // перебираем все кнопки add-to-cart циклом for
-//     addToCartButtons[i].addEventListener("click",function() {
-//         productsCountEl.textContent = +productsCountEl.textContent + +quantityValue[i].value;
-//         quantityValue[i].value = 1;
-//    })
-// }
+
 
 //modal
 
@@ -28,10 +23,7 @@ console.log(moreDetailsBtns);
 console.log(closeBtn);
 
 moreDetailsBtns.forEach((btn) => { //на пер. moreDetailsBtns вешаем ф.forEach, где btn- текущий эл.
-    btn.addEventListener("click",function() {
-        modal.classList.add("show");// свойство.метод classList.add добавляет класс.
-        modal.classList.remove("hide");// свойство.метод classList.remove удаляет класс
-    }) 
+    btn.addEventListener("click",openModal) 
 })
 
 function closeModal() {
@@ -39,10 +31,10 @@ function closeModal() {
     modal.classList.remove("show");
 }
 
-// function openModal() {
-//     modal.classList.add("show");// свойство.метод classList.add добавляет класс.
-//     modal.classList.remove("hide");// свойство.метод classList.remove удаляет класс
-// }
+function openModal() {
+    modal.classList.add("show");// свойство.метод classList.add добавляет класс.
+    modal.classList.remove("hide");// свойство.метод classList.remove удаляет класс
+}
 
 closeBtn.addEventListener("click",closeModal)
 
@@ -52,47 +44,72 @@ modal.addEventListener("click",function(e) {
     }
 })
 
-// // console.log(window.pageYOffset) // сколько проскролили
-// // console.log(document.body.scrollHeight) // высота странички
 
-// function showModalByScroll() {
-//         window.removeEventListener("scroll",showModalByScroll)
-//     }
+//console.log(window.pageYOffset) // сколько проскролили
+//console.log(document.body.scrollHeight) // высота странички
+
+function showModalByScroll() {
+    if(window.pageYOffset > document.body.scrollHeight/2) {
+        openModal();
+        window.removeEventListener("scroll",showModalByScroll)// на событии scroll удалить ф. showModalByScroll.
+    }
+} 
 
 
-// // function showModalByScroll() {
-// //     if(window.pageYOffset > document.body.scrollHeight/2) {
-// //         openModal();
-// //         window.removeEventListener("scroll",showModalByScroll)// на событии scroll удалить ф. showModalByScroll.
-// //     }
-// // }
-
-// //  window.addEventListener("scroll",showModalByScroll);
+window.addEventListener("scroll",showModalByScroll);
    
-// // change like button state
 
-//  let likeButtons = document.querySelectorAll('.heart');
 
-//  likeButtons.forEach((btn) => {
-//      btn.addEventListener("click",function(e) {
-//          this.classList.toggle("liked")
-//         //  console.log(e.target) // можно прописать так.
-//         // if(this.classList.contains("liked")) {// this указывает на эл., по которому мы кликнули.
-//         //     this.classList.remove("liked")
-//         // } else {
-//         //     this.classList.add("liked")
-//         // }
-//     })
-//  })
+// change like button state
 
-//  //change product count
-//  //нашли все эл.
-//  let decrementButns = document.querySelectorAll(".decrement-button");
-//  let incrementButns = document.querySelectorAll(".increment-button");
-//  let quantityValue = document.querySelectorAll(".product-quantity input");
+let likeButtons = document.querySelectorAll('.heart');
 
-// // let minCount = 1;
-// // let maxCount = 5;
+ likeButtons.forEach((btn) => {
+     btn.addEventListener("click",function(e) {
+         this.classList.toggle("liked")
+    //      console.log(e.target) // можно прописать так.
+    //     if(this.classList.contains("liked")) {// this указывает на эл., по которому мы кликнули.
+    //         this.classList.remove("liked")
+    //     } else {
+    //         this.classList.add("liked")
+    //     }
+     })
+ })
+
+//change product count
+//нашли все эл.
+let decrementBtns = document.querySelectorAll(".decrement-button")[0];
+let incrementBtns = document.querySelectorAll(".increment-button")[0];
+let quantityValue = document.querySelectorAll(".product-quantity input")[0];
+let currentCount = +quantityValue.value;
+let minCount = 1;
+let maxCount = 5;
+
+function toggleButtonState(count) {
+    decrementBtns.disabled = count <= minCount;
+    incrementBtns.disabled = count >= maxCount;
+}
+
+toggleButtonState(currentCount)
+
+incrementBtns.addEventListener("click",function() {
+    let currentCount = +quantityValue.value;
+    let nextCount = currentCount + 1;
+    quantityValue.value = nextCount;
+
+    toggleButtonState(nextCount)
+})
+
+decrementBtns.addEventListener("click",function() {
+    let currentCount = +quantityValue.value;
+    let nextCount = currentCount - 1;
+    quantityValue.value = nextCount;
+
+    toggleButtonState(nextCount) 
+
+})
+
+
 
 
 
@@ -135,7 +152,7 @@ modal.addEventListener("click",function(e) {
 // function Counter(incrementButn,decrementButn,inputField,minCount = 1,maxCount = 5) {
 //     // this.incrementButn = incrementButns; // this code is the same with below one.
 //     // this.decrementButn = decrementButns;
-//     // this.inputField = inputField;
+// //     // this.inputField = inputField;
 
 //     this.domRefs = {// domRefs - object. This code is the same with above one(shorthand)
 //         incrementButn,
