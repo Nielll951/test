@@ -1,4 +1,5 @@
 //add to cart
+
 let productsCountEl = document.getElementById("products-count");// at first we should find the elements
 //console.log(productsCountEl);
  let addToCartButtons = document.querySelectorAll(".add-to-cart");// at first we should find the elements
@@ -7,7 +8,8 @@ let productsCountEl = document.getElementById("products-count");// at first we s
 //можно задать addEventListener для одного эл., но не для неск.эл.(псевдомассива).
 for(let i = 0;i < addToCartButtons.length;i++) {
     addToCartButtons[i].addEventListener("click",function () {
-        productsCountEl.textContent = +productsCountEl.textContent + 1;
+        productsCountEl.textContent = +productsCountEl.textContent + +quantityValue[i].value;
+        quantityValue[i].value = 1;
     })
 }
 
@@ -15,20 +17,20 @@ for(let i = 0;i < addToCartButtons.length;i++) {
 //modal
 
 let modal = document.querySelector(".modal");//находим елемент
-let moreDetailsBtns = document.querySelectorAll(".more-details"); 
+let moreDetailsBtns = document.querySelectorAll(".more-details");  
 let closeBtn = document.querySelector(".btn-close");
 
 console.log(modal);
 console.log(moreDetailsBtns);
 console.log(closeBtn);
 
-moreDetailsBtns.forEach((btn) => { //на пер. moreDetailsBtns вешаем ф.forEach, где btn- текущий эл.
+moreDetailsBtns.forEach((btn) => { //на пер. moreDetailsBtns вешаем ф.forEach, где btn-текущий эл.
     btn.addEventListener("click",openModal) 
 })
 
 function closeModal() {
     modal.classList.add("hide");
-    modal.classList.remove("show");
+    modal.classList.remove("show"); 
 }
 
 function openModal() {
@@ -48,15 +50,15 @@ modal.addEventListener("click",function(e) {
 //console.log(window.pageYOffset) // сколько проскролили
 //console.log(document.body.scrollHeight) // высота странички
 
-function showModalByScroll() {
-    if(window.pageYOffset > document.body.scrollHeight/2) {
-        openModal();
-        window.removeEventListener("scroll",showModalByScroll)// на событии scroll удалить ф. showModalByScroll.
-    }
-} 
+// function showModalByScroll() {
+//     if(window.pageYOffset > document.body.scrollHeight/2) {
+//         openModal();
+//         window.removeEventListener("scroll",showModalByScroll)// на событии scroll удалить ф. showModalByScroll.
+//     }
+// } 
 
 
-window.addEventListener("scroll",showModalByScroll);
+// window.addEventListener("scroll",showModalByScroll);
    
 
 
@@ -78,135 +80,130 @@ let likeButtons = document.querySelectorAll('.heart');
 
 //change product count
 //нашли все эл.
-let decrementBtns = document.querySelectorAll(".decrement-button")[0];
-let incrementBtns = document.querySelectorAll(".increment-button")[0];
-let quantityValue = document.querySelectorAll(".product-quantity input")[0];
-let currentCount = +quantityValue.value;
-let minCount = 1;
-let maxCount = 5;
+let decrementBtns = document.querySelectorAll(".decrement-button");
+let incrementBtns = document.querySelectorAll(".increment-button");
+let quantityValue = document.querySelectorAll(".product-quantity input");
 
-function toggleButtonState(count) {
-    decrementBtns.disabled = count <= minCount;
-    incrementBtns.disabled = count >= maxCount;
-}
+// let minCount = 1;
+// let maxCount = 5;
 
-toggleButtonState(currentCount)
+// // console.log(decrementBtns)
+// // console.log(incrementBtns)
+// // console.log(quantityValue)
 
-incrementBtns.addEventListener("click",function() {
-    let currentCount = +quantityValue.value;
-    let nextCount = currentCount + 1;
-    quantityValue.value = nextCount;
+// for(let i = 0;i < quantityValue.length;i++) {
+//     let currentCount = +quantityValue[i].value;
+//     toggleButtonState(currentCount,decrementBtns[i],incrementBtns[i])
+// }
 
-    toggleButtonState(nextCount)
-})
+// function toggleButtonState(count,decrementBtn,incrementBtn) {
+//     decrementBtn.disabled = count <= minCount;
+//     incrementBtn.disabled = count >= maxCount;
+// }
 
-decrementBtns.addEventListener("click",function() {
-    let currentCount = +quantityValue.value;
-    let nextCount = currentCount - 1;
-    quantityValue.value = nextCount;
-
-    toggleButtonState(nextCount) 
-
-})
-
-
-
-
-
-// // for(let i = 0;i < quantityValue.length;i++) {
-// //     let currentCount = +quantityValue[i].value;
-// //     toggleButtonState(currentCount,decrementButns[i],incrementButns[i])
-// // }
-
-// // function toggleButtonState(count,decrementButn,incrementButn) {
-// //     decrementButn.disabled = count <= minCount;
-// //     incrementButn.disabled = count >= maxCount;
-// // }
-
-// // for(let i = 0;i < incrementButns.length; i++) {
-// //     incrementButns[i].addEventListener("click",function() {
-// //         let currentCount = +quantityValue[i].value;
-// //         let nextCount = currentCount + 1;
-// //         quantityValue[i].value = nextCount;
+// for(let i = 0;i < incrementBtns.length; i++) {
+//     incrementBtns[i].addEventListener("click",function() {
+//         let currentCount = +quantityValue[i].value;
+//         let nextCount = currentCount + 1;
+//         quantityValue[i].value = nextCount;
     
-// //         toggleButtonState(nextCount,decrementButns[i],incrementButns[i])
+//         toggleButtonState(nextCount,decrementBtns[i],incrementBtns[i])
     
-// //     })
-// // }
+//     })
+// }
 
-// // for(let i = 0;i < decrementButns.length; i++) {
-// //     decrementButns[i].addEventListener("click",function() {
-// //         let currentCount = +quantityValue[i].value;
-// //         let nextCount = currentCount - 1;
-// //         quantityValue[i].value = nextCount;
+// for(let i = 0;i < decrementBtns.length; i++) {
+//     decrementBtns[i].addEventListener("click",function() {
+//         let currentCount = +quantityValue[i].value;
+//         let nextCount = currentCount - 1;
+//         quantityValue[i].value = nextCount;
 
-// //         toggleButtonState(nextCount,decrementButns[i],incrementButns[i])
+//         toggleButtonState(nextCount,decrementBtns[i],incrementBtns[i])
 
-// //     })
+//     })
 
-// // } 
- 
+// } 
+
+
+
 
 // //function constructor change product quantity
 
-// function Counter(incrementButn,decrementButn,inputField,minCount = 1,maxCount = 5) {
-//     // this.incrementButn = incrementButns; // this code is the same with below one.
-//     // this.decrementButn = decrementButns;
+// function Counter(incrementBtn,decrementBtn,inputField,minCount = 1,maxCount = 5) {
+//     // this.incrementBtn = incrementBtns; // this code is the same with below one.
+//     // this.decrementBtn = decrementBtns;
 // //     // this.inputField = inputField;
 
-//     this.domRefs = {// domRefs - object. This code is the same with above one(shorthand)
-//         incrementButn,
-//         decrementButn,
-//         inputField,
-//     }
+function Counter(incrementBtn,decrementBtn,inputField,minCount = 1,maxCount = 5) {
 
-//     this.toggleButtonState = function () {
-//         let count = this.domRefs.inputField.value;
-//         this.domRefs.decrementButn.disabled = count <= minCount;
-//         this.domRefs.incrementButn.disabled = count >= maxCount;
-//     }
+    this.domRefs = {// domRefs - object. This code(shorthand) is the same with above one.
+        incrementBtn,
+        decrementBtn,
+        inputField,
+    }
 
-//     this.toggleButtonState();
+    this.toggleButtonState = function () {
+        let count = this.domRefs.inputField.value;
+        this.domRefs.decrementBtn.disabled = count <= minCount;
+        this.domRefs.incrementBtn.disabled = count >= maxCount;
+    }
 
-//     this.increment = function() {
-//         let currentCount = +this.domRefs.inputField.value;
-//         let nextCount = currentCount + 1;
-//         this.domRefs.inputField.value = nextCount;
+    this.toggleButtonState();
+
+    this.increment = function() {
+        let currentCount = +this.domRefs.inputField.value;
+        let nextCount = currentCount + 1;
+        this.domRefs.inputField.value = nextCount;
         
-//         this.toggleButtonState()
-//     }
+        this.toggleButtonState()
+    }
 
-//     this.decrement = function() {
-//         let currentCount = +this.domRefs.inputField.value;
-//         let nextCount = currentCount - 1;
-//         this.domRefs.inputField.value = nextCount;
+    this.decrement = function() {
+        let currentCount = +this.domRefs.inputField.value;
+        let nextCount = currentCount - 1;
+        this.domRefs.inputField.value = nextCount;
         
-//         this.toggleButtonState()
-//     }
+        this.toggleButtonState()
+    }
 
-//     this.domRefs.incrementButn.addEventListener("click",this.increment.bind(this));
-//     this.domRefs.decrementButn.addEventListener("click",this.decrement.bind(this));
+    this.domRefs.incrementBtn.addEventListener("click",this.increment.bind(this));
+    this.domRefs.decrementBtn.addEventListener("click",this.decrement.bind(this));
 
-//     console.log(this)
-// }
+    console.log(this)
+}
 
-// const counters = [];
-// //передеаем колбэк ф., где 1й пар-текущий эл.массива, 2й пар.-порядковый номер(индекс элемента), 3й пар-сам массив, но 
-// // 2й и 3й пар.не обязательные.
-// quantityValue.forEach((counterItem,i) => (
-//     counters[i] = new Counter(incrementButns[i],decrementButns[i],counterItem)   
+const counters = [];
+//передеаем колбэк ф., где 1й пар-текущий эл.массива, 2й пар.-порядковый номер(индекс элемента), 3й пар-сам массив, но 
+// 2й и 3й пар.не обязательные.
+quantityValue.forEach((counterItem,i) => (
+    counters[i] = new Counter(incrementBtns[i],decrementBtns[i],counterItem)   
 
-// ))
+))
   
 
 
  
 
 
-// // slider slick
-// $(".slider-block").slick({
-//     dots:true, 
-// }); 
+// slider slick
+$(".slider-block").slick({
+    dots:true, 
+}); 
 
 
+//selectize.js
 
+$('#select-beast').selectize({
+        create: true,
+        sortField: {
+            field: 'text',
+            direction: 'asc'
+        },
+        dropdownParent: 'body'
+    });
+
+
+    $('#select-beast').selectize({
+        create: true,
+        sortField: 'text'
+    });

@@ -264,9 +264,31 @@ aside {
   color: white;
   margin-top: 15px;
   margin-left: 5px;
+  float: left;
 }
 
-.sort_by {
+.control-group {
+  padding-left: 587px;
+  padding-top: 20px;
+}
+
+.demo-default {
+  width: 273px;
+  height: 40px;
+  background-color: #2d71b8;
+  border: 1px solid white;
+  color: white;
+  font-size: 21px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 5px 10px 6px 10px;
+}
+
+.demo-default option {
+  font-weight: 300;
+}
+
+/* .sort_by {
   background-color: rgb(44, 113, 184);
   color: white;
   border: 1px solid white;
@@ -276,7 +298,8 @@ aside {
   width: 270px;
   height: 40px;
   margin-left: 590px;
-}
+} */
+
 
 .product-list {
   width: 270px;
